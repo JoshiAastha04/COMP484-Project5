@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSUN Map Quiz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>CSUN <span>MAP</span> QUIZ</h1>
+        <div id="timer-display">00:00</div>
+        <div id="score-display">
+            Best Time: <strong id="best-time-display">--:--</strong>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT: sidebar + map -->
+    <div class="main">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar">
+
+            <!-- Current Prompt -->
+            <div id="prompt-box">
+                <p class="label">Double-click on the map</p>
+                <p class="question" id="current-question">Loading...</p>
+            </div>
+
+            <!-- Progress Dots -->
+            <div id="progress"></div>
+
+            <!-- Feedback Flash -->
+            <div id="feedback"></div>
+
+            <!-- History Log -->
+            <div id="history">
+                <p class="log-label">&#x1F4CB; Round History</p>
+            </div>
+
+        </div>
+
+        <!-- MAP -->
+        <div id="map"></div>
+
+    </div>
+
+    <!-- FINAL SCREEN OVERLAY -->
+    <div id="final-screen">
+        <h2>Quiz Complete!</h2>
+        <div id="final-result">
+            <span class="c" id="final-correct">0</span> / <span id="final-total">5</span>
+        </div>
+        <p id="final-time"></p>
+        <p id="highscore-badge">&#x1F3C6; New Best Time!</p>
+        <button id="play-again">PLAY AGAIN</button>
+    </div>
+
+    <!-- KEY-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFGUgJ0ikRhKujBvRgw_b8fcr8lj5JOBk&callback=initMap"
+        async defer>
+        </script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
